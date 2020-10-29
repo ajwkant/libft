@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 11:15:52 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/28 15:03:18 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/10/29 15:52:38 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,10 @@ int		main(void)
 	// char string4[10];
 	unsigned int start;
 	size_t len;
+	char **rijtje;
 
-	string = "hello";
+	string = "baabbccbbaba";
 	string2 = "abcdef";
-
 	start = 6;
 	len = 5;
 	// ft_putchar_fd('a', 1);
@@ -41,6 +41,12 @@ int		main(void)
 	// printf("%s\n", ft_strrchr(string, 'l'));
 	// ft_memset(string3, 'a', 3);
 	// printf("%s\n", string3);
-	ft_bzero(string, 6);
-	printf("%s\n", string);
+	// ft_bzero(string, 6);
+	// printf("%s\n", string);
+	rijtje = ft_split(string, 'b');
+	while (*rijtje)
+	{
+		printf("Dit staat er:	%s", rijtje);
+		rijtje++;
+	}
 }

@@ -1,11 +1,23 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        ::::::::            */
+/*   libft.h                                            :+:    :+:            */
+/*                                                     +:+                    */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
+/*                                                   +#+                      */
+/*   Created: 2020/10/29 15:05:13 by akant         #+#    #+#                 */
+/*   Updated: 2020/10/29 15:54:35 by akant         ########   odam.nl         */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-# ifndef LIBFT.H
-#define LIBFT.H
+#ifndef LIBFT.H
+# define LIBFT.H
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, int nbyte);
@@ -25,6 +37,7 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
+char	**ft_split(char const *s, char c);
 char	*ft_strrchr(const char *str, int c);
 char	*strdup(const char *string);
 char	*ft_strjoin(char const *s1, char const *s2);
