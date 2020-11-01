@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 16:11:53 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/28 14:54:13 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/10/30 15:24:59 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,8 +30,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		if (*haystack == *needle)
 		{
-			if (is_this_needle(haystack, needle))
-				return (haystack);
+			if (is_this_needle((char *)haystack, (char *)needle))
+				return ((char *)haystack);
 		}
 		haystack++;
 		len--;

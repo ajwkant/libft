@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 11:12:11 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/28 15:03:08 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/10/30 15:27:51 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_tolower(int c)
 {
-	if (65 <= c <= 90)
+	if (65 <= c && c <= 90)
 		c += 32;
 	return (c);
 }

@@ -6,13 +6,13 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 17:56:53 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/28 17:07:38 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/10/30 15:27:37 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_in_set(char const *set, char c)
+int		is_in_set(char *set, char c)
 {
 	while (*set)
 	{
@@ -32,9 +32,9 @@ int		trimmed_size(char *string, char *set)
 	j = 0;
 	count = 0;
 
-	while (s1[i])
+	while (string[i])
 	{
-		if (!is_in_set(set, s1[i]))
+		if (!is_in_set(set, string[i]))
 		{
 			count += j;
 			j = 0;
@@ -54,10 +54,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		size;
 	i = 0;
 	
-	size = trimmed_size(s1, set);
+	size = trimmed_size((char *)s1, (char *)set);
 	string = malloc(size);
-	while (is_in_set(set, s1[i]))
+	if (!string)
+		return (NULL);
+	while (is_in_set((char *)set, s1[i]))
 		i++;
-	strcpy(string, s1 + i, size);
+	ft_strlcpy(string, s1 + i, size);
 	return (string);
 }

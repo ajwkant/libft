@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 17:41:47 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/28 15:12:02 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/10/30 14:54:33 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,8 @@ void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n)
 
 	while (src && i < n)
 	{
-		*(char *)(dst + i) = *(char *)(src + i);
-		if (*(char *)dst == *(char *)c)
+		((char *)dst)[i] = ((char *)src)[i];
+		if (((char *)dst)[i] == (char)c)
 			return (dst);
 		i++;
 	}

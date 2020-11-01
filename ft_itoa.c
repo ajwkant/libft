@@ -1,21 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_isalpha.c                                       :+:    :+:            */
+/*   ft_itoa.c                                          :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 11:01:39 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/30 14:49:59 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/10/30 16:27:04 by alexanderka   #+#    #+#                 */
+/*   Updated: 2020/11/01 15:27:40 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int		ft_isalpha(int c)
+char	*ft_itoa(int n)
 {
-	if (('a' <= c && c <= 'z') || ('A' <= c && c <= 'Z'))
-		return (c);
-	else
-		return (0);
+	
 }

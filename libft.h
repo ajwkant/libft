@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 15:05:13 by akant         #+#    #+#                 */
-/*   Updated: 2020/10/29 15:54:35 by akant         ########   odam.nl         */
+/*   Updated: 2020/10/30 11:16:40 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#ifndef LIBFT.H
-# define LIBFT.H
+#ifndef LIBFT_H
+#define LIBFT_H
 
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, int nbyte);
