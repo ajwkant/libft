@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 11:15:52 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/30 16:44:47 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/01 17:25:06 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int		main(void)
 	// char string4[10];
 	unsigned int start;
 	size_t len;
-	char **array;
+	// char **array;
 
-	string = " a b cc    sdf sd  d sdf sd fsad f  sdf ds fsd  d fd sd df        d   sdfas ";
+	string = " a b cc";
 	string2 = "abcdef";
 	start = 6;
 	len = 5;
@@ -43,15 +43,16 @@ int		main(void)
 	// printf("%s\n", string3);
 	// ft_bzero(string, 6);
 	// printf("%s\n", string);
-	array = ft_split(string, ' ');
-	if (!array)
-	{
-		write(1, "?", 1);
-		return (0);
-	}
-	while (*array)
-	{
-		printf("Array substring:	%s\n", *array);
-		array++;
-	}
+	// array = ft_split(string, ' ');
+	// if (!array)
+	// {
+	// 	write(1, "?", 1);
+	// 	return (0);
+	// }
+	// while (*array)
+	// {
+	// 	printf("Array substring:	%s\n", *array);
+	// 	array++;
+	// }
+	// printf("%s\n", ft_itoa(12332423));
 }

@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 17:22:46 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/30 16:45:11 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/01 18:24:34 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,13 @@ char	**ft_split(char const *s, char c)
 	int bool;
 	int startindex;
 	int size;
+
 	i = 0;
 	bool = 1;
 	size = 0;
 	char x;
-	
 	int aantal;
 	aantal = amount_split((char *)s, c);
-
 	array = ft_calloc(amount_split((char *)s, c) + 1, sizeof(char *));
 	if (!array)
 		return (NULL);
@@ -95,3 +94,5 @@ char	**ft_split(char const *s, char c)
 	}
 	return (array - aantal);
 }
+
+// Te lange functies, freeen van shit als het foutgaat
