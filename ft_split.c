@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 17:22:46 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/03 09:09:41 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/05 17:48:56 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,7 +95,10 @@ char	**ft_split(char const *s, char c)
 		free(array[i]);
 		i--;
 		if (!i)
+		{
+			free(array[i]);
 			free(array);
+		}
 	}
 	return (array);
 }

@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 15:05:13 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/04 09:42:58 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/05 13:52:10 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 #include <string.h>
 
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
 typedef struct		s_list
 {

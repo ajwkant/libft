@@ -1,28 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   main.c                                             :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: akant <akant@student.codam.nl>               +#+                     */
+/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/05 20:48:48 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/05 21:13:06 by akant         ########   odam.nl         */
+/*   Created: 2020/11/03 15:41:09 by alexanderka   #+#    #+#                 */
+/*   Updated: 2020/11/03 16:00:23 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int		main(void)
 {
-	unsigned int i;
+	char test1[50] = "  x abcx da x e x ";
 
-	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	while (n - i)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dest);
+	printf("Strtrim  : %s\n", ft_strtrim(test1, " xp"));
+	printf("Should be: %s\n", "abcx da x e");
 }

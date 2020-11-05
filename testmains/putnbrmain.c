@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   main.c                                             :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: akant <akant@student.codam.nl>               +#+                     */
+/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/05 20:48:48 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/05 21:13:06 by akant         ########   odam.nl         */
+/*   Created: 2020/11/02 17:11:24 by alexanderka   #+#    #+#                 */
+/*   Updated: 2020/11/02 17:15:27 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int		main(void)
 {
-	unsigned int i;
+	int a = +123;
+	int b = -123;
+	int c = -12;
+	int d = -123122312;
 
-	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	while (n - i)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dest);
+	ft_putnbr_fd(a, 1);
+	ft_putnbr_fd(b, 1);
+	ft_putnbr_fd(c, 1);
+	ft_putnbr_fd(d, 1);
 }

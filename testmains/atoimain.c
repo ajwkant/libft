@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   main.c                                             :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: akant <akant@student.codam.nl>               +#+                     */
+/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/05 20:48:48 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/05 21:13:06 by akant         ########   odam.nl         */
+/*   Created: 2020/11/02 13:58:10 by alexanderka   #+#    #+#                 */
+/*   Updated: 2020/11/02 14:07:14 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int		main(void)
 {
-	unsigned int i;
+	char a[] = {"+123"};
+	char b[] = {"-123"};
+	char c[] = {"--12a3"};
+	char d[] = {"-12-b3"};
 
-	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	while (n - i)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dest);
+	printf("%d\n%d\n%d\n%d\n\n", ft_atoi(a),ft_atoi(b),ft_atoi(c), ft_atoi(d));
+	printf("%d\n%d\n%d\n%d\n", atoi(a),atoi(b),atoi(c), atoi(d));
 }

@@ -1,28 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_memcpy.c                                        :+:    :+:            */
+/*   main.c                                             :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: akant <akant@student.codam.nl>               +#+                     */
+/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/05 20:48:48 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/05 21:13:06 by akant         ########   odam.nl         */
+/*   Created: 2020/11/03 14:35:02 by alexanderka   #+#    #+#                 */
+/*   Updated: 2020/11/03 15:01:53 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+int		main(void)
 {
-	unsigned int i;
+	char test[50] = "This is a test";
+	char test1[50] = "abc";
+	char test2[50] = "\0sss";
 
-	i = 0;
-	if (!dest && !src)
-		return (NULL);
-	while (n - i)
-	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
-		i++;
-	}
-	return (dest);
+	printf("new string: %s\n", ft_strjoin(test, test1));
+	printf("new string: %s\n", ft_strjoin(test, test2));
+	printf("new string: %s\n", ft_strjoin(test1, test));
 }
