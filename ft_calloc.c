@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 15:33:51 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/28 16:01:17 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/02 13:52:42 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	*ft_calloc(size_t nitems, size_t size)
 	i = 0;
 
 	ptr = malloc(nitems * size);
+	if (!ptr)
+		return (NULL);
 	ft_bzero(ptr, size);
 	return (ptr);
 }

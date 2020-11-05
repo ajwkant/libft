@@ -5,54 +5,50 @@
 /*                                                     +:+                    */
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/26 11:15:52 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/01 17:25:06 by akant         ########   odam.nl         */
+/*   Created: 2020/11/04 09:28:53 by alexanderka   #+#    #+#                 */
+/*   Updated: 2020/11/04 17:34:31 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+void	print(void *c)
+{
+	char *hoi = (char *)c;
+
+	printf("%c\n", *hoi);
+}
+
+void	del(void *delete)
+{
+	t_list *temp = (t_list *)delete;
+	write(1, "A", 1);
+	temp->content = NULL;
+	write(1, "B", 1);
+}
+
 int		main(void)
 {
-	char *string;
-	char *string2;
-	// char string3[10];
-	// char string4[10];
-	unsigned int start;
-	size_t len;
-	// char **array;
+	t_list *a;
+	t_list *b;
+	t_list *c;
 
-	string = " a b cc";
-	string2 = "abcdef";
-	start = 6;
-	len = 5;
-	// ft_putchar_fd('a', 1);
-	// ft_putendl_fd("hello world", 1);
-	// printf("%s\n", ft_substr(string, start, len));
-	// printf("%s\n", ft_strjoin(string, string2));
-	// printf("%lu\n", strlen(string));
-	// printf("%lu %s\n", ft_strlcpy(string3, string, 10), string3);
-	// ft_strlcpy(string3, string, 10);
-	// // printf("%lu\n", ft_strlen(string3));
-	// ft_strlcpy(string4, string2, 10);
-	// printf("%lu %s\n", ft_strlcat(string3, string, 10), string3);
-	// printf("%lu %s\n", strlcat(string4, string, 10), string4);
-	// printf("%s\n", ft_strchr(string, 'p'));
-	// printf("%s\n", ft_strrchr(string, 'l'));
-	// ft_memset(string3, 'a', 3);
-	// printf("%s\n", string3);
-	// ft_bzero(string, 6);
-	// printf("%s\n", string);
-	// array = ft_split(string, ' ');
-	// if (!array)
-	// {
-	// 	write(1, "?", 1);
-	// 	return (0);
-	// }
-	// while (*array)
-	// {
-	// 	printf("Array substring:	%s\n", *array);
-	// 	array++;
-	// }
-	// printf("%s\n", ft_itoa(12332423));
+	a = ft_lstnew("a");
+	b = ft_lstnew("b");
+	ft_lstadd_front(&a, b);
+	c = ft_lstnew("c");
+	ft_lstadd_front(&b, c);
+	ft_lstiter(c, (void *)print);
+	printf("cba is what it should be\n");
+
+	a = ft_lstnew("d");
+	ft_lstadd_back(&c, a);
+	ft_lstiter(c, (void *)print);
+	printf("cbad is what it should be\n");
+	printf("Actual size: %d, size by lstsize: %d\n", 4, ft_lstsize(c));
+
+	printf("Last should be 'd', it is: ");
+	ft_lstiter(ft_lstlast(c), (void *)print);
+
+	ft_lstclear(&c, (void *)del);
 }

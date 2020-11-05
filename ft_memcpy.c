@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 17:35:01 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/29 14:29:45 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/02 18:19:17 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 void	*ft_memcpy(void *dest, const void * src, size_t n)
 {
 	unsigned int i;
-	i = 0;
 
+	i = 0;
 	while (src + i && n - i)
 	{
 		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];

@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/29 15:05:13 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/01 16:47:03 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/04 09:42:58 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 #ifndef LIBFT_H
 #define LIBFT_H
 
+typedef struct		s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 int		ft_atoi(const char *str);
 void	ft_bzero(void *s, int nbyte);
 void	*ft_calloc(size_t nitems, size_t size);
@@ -28,6 +34,15 @@ int		ft_isascii(int c);
 int		ft_isdigit(int c);
 int		ft_isprint(int c);
 char	*ft_itoa(int n);
+void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_front(t_list **lst, t_list *new);
+void	ft_lstclear(t_list **lst, void (*del)(void *));
+void	ft_lstdelone(t_list *lst, void (*del)(void *));
+void	ft_lstiter(t_list *lst, void (*f)(void *));
+t_list	*ft_lstlast(t_list *lst);
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
+t_list	*ft_lstnew(void *content);
+int		ft_lstsize(t_list *lst);
 void	*ft_memccpy(void *restrict dst, const void *restrict src, int c, size_t n);
 void	*ft_memchr(const void *str, int c, size_t n);
 int		ft_memcmp(const void *str1, const void *str2, size_t n);
@@ -40,7 +55,7 @@ void	ft_putnbr_fd(int n, int fd);
 void	ft_putstr_fd(char *s, int fd);
 char	**ft_split(char const *s, char c);
 char	*ft_strrchr(const char *str, int c);
-char	*strdup(const char *string);
+char	*ft_strdup(const char *string);
 char	*ft_strjoin(char const *s1, char const *s2);
 size_t	ft_strlcat(char * restrict dst, const char * restrict src, size_t dstsize);
 size_t	ft_strlcpy(char * restrict dst, const char * restrict src, size_t dstsize);

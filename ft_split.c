@@ -6,93 +6,96 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 17:22:46 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/01 18:24:34 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/03 09:09:41 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		amount_split(char *s, char c)
+int		count_splits(char *s, char c)
 {
 	int	size;
-	int i;
 	int bool;
 	size = 0;
-	i = 0;
 	bool = 1;
-	while (s[i])
+	while (*s)
 	{
-		if (s[i] != c)
+		if (*s != c)
 		{
 			if (bool)
 				size++;
 			bool = 0;
 		}
-		else
-		{
+		if (*s == c)
 			bool = 1;
-		}
-		i++;
+		s++;
 	}
-	printf("%d\n", size);
 	return (size);
 }
 
-int		fill_in(char **array, char *s, int startindex, int size)
+char	*fill_in(char *array, char *s, char delim)
 {
-	*array = ft_substr(s, startindex, size);
+	int i;
+
+	i = 0;
+	while (s[i] != delim)
+		i++;
+	array = ft_calloc(i, sizeof(char));
 	if (!array)
-		return (0);
-	return (1);
+		return (NULL);
+	i = 0;
+	while (s[i] != delim)
+	{
+		array[i] = s[i];
+		i++;
+	}
+	return (array);
+}
+
+int		split_string(char **array, char *s, char c)
+{
+	int bool;
+	int i;
+
+	bool = 1;
+	i = 0;
+	while (*s)
+	{
+		if (*s != c)
+		{
+			if (bool)
+			{
+				array[i] = fill_in(array[i], s, c);
+				if (!array[i])
+					return (i);
+				i++;
+			}
+			bool = 0;
+		}
+		else if (*s == c)
+			bool = 1;
+		s++;
+	}
+	return (0);
 }
 
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
-	int i;
-	int bool;
-	int startindex;
-	int size;
+	int		i;
+	int		bool;
 
-	i = 0;
 	bool = 1;
-	size = 0;
-	char x;
-	int aantal;
-	aantal = amount_split((char *)s, c);
-	array = ft_calloc(amount_split((char *)s, c) + 1, sizeof(char *));
+	array = ft_calloc(count_splits((char *)s, c) + 1, sizeof(char *));
 	if (!array)
 		return (NULL);
-	while (s[i])
+	i = split_string(array, (char *)s, c);
+	while (i)
 	{
-		if (s[i] != c)
-		{
-			if (bool)
-				startindex = i;
-			size++;
-			bool = 0;
-		}
-		else
-		{
-			if (size)
-			{
-				x = size + '0';
-				if (!fill_in(array, (char *)s, startindex, size))
-					return (NULL);
-				array++;
-				size = 0;
-			}
-			bool = 1;
-		}
-		i++;
+		free(array[i]);
+		i--;
+		if (!i)
+			free(array);
 	}
-	if (size)
-	{
-		if (!fill_in(array, (char *)s, startindex, size))
-			return (NULL);
-		array++;
-	}
-	return (array - aantal);
+	return (array);
 }
-
-// Te lange functies, freeen van shit als het foutgaat
