@@ -3,45 +3,53 @@
 /*                                                        ::::::::            */
 /*   ft_atoi.c                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 10:45:44 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/06 18:05:33 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/07 14:21:44 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/07 15:46:38 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+int		whitespace_sign(const char *string, int *neg)
 {
-	int num;
 	int i;
 
-	num = 0;
 	i = 0;
-	if ((unsigned char)str[i] == '-' || (unsigned char)str[i] == '+'
-	|| (unsigned char)str[i] == ' ')
+	*neg = 1;
+	while (((unsigned char)string[i] >= 9 && (unsigned char)string[i] <= 13)
+		|| (unsigned char)string[i] == 32)
 		i++;
-	
-	while ('0' <= (unsigned char)str[i] && (unsigned char)str[i] <= '9')
+	if ((unsigned char)string[i] == '-' || (unsigned char)string[i] == '+')
+	{
+		if ((unsigned char)string[i] == '-')
+			*neg = -1;
+		i++;
+	}
+	return (i);
+}
+
+int		ft_atoi(const char *str)
+{
+	long int	num;
+	int			neg;
+	int			*negptr;
+	int			i;
+
+	negptr = &neg;
+	num = 0;
+	i = whitespace_sign(str, negptr);
+	while ('0' <= (unsigned char)str[i] &&
+	(unsigned char)str[i] <= '9' && num < 2147483648)
 	{
 		num = num * 10 + ((unsigned char)str[i] - '0');
 		i++;
 	}
-	if (str[0] == '-')
-		num *= -1;
+	num *= neg;
+	if (num < -2147483648)
+		return (0);
+	if (num > 2147483647)
+		return (-1);
 	return (num);
-}
-
-int main(void)
-{
-	char *n = "\t\v\f\r\n \f-06050";
-	int i1 = atoi(n);
-	int i2 = ft_atoi(n);
-	
-	printf("%d, %d\n", i1, i2);
-
-	if (i1 == i2)
-		printf("succes");
-	printf("failed");
 }

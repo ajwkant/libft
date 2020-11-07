@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 16:01:53 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/03 14:32:21 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/07 16:11:39 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strdup(const char *string)
 	int i;
 
 	i = 0;
-	dup = malloc(sizeof(string) + 1);
+	dup = malloc(ft_strlen(string) + 1);
 	if (!dup)
 		return (NULL);
 	while (string[i])

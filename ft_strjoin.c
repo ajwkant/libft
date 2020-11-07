@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/26 17:21:57 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/03 15:05:56 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/07 18:00:49 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ char *ft_strjoin(char const *s1, char const *s2)
 	char *string;
 
 	i = 0;
+	if (!s1 || !s2)
+		return (NULL);
 	total_length = (int)(strlen(s1) + strlen(s2));
 	string = malloc((total_length + 1) * sizeof(char));
 	if (string == NULL)

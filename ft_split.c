@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/28 17:22:46 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/05 17:48:56 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/07 20:42:08 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int		count_splits(char *s, char c)
 {
 	int	size;
 	int bool;
+
 	size = 0;
 	bool = 1;
 	while (*s)
@@ -85,6 +86,8 @@ char	**ft_split(char const *s, char c)
 	int		i;
 	int		bool;
 
+	if (!s)
+		return (NULL);
 	bool = 1;
 	array = ft_calloc(count_splits((char *)s, c) + 1, sizeof(char *));
 	if (!array)

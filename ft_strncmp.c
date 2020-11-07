@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strncmp.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 10:34:03 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/06 17:00:52 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/07 20:35:34 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/07 20:35:36 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

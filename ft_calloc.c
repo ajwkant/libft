@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_calloc.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 15:33:51 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/02 13:52:42 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/07 15:47:35 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/07 17:44:15 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 void	*ft_calloc(size_t nitems, size_t size)
 {
-	void *ptr;
-	int i;
-	i = 0;
+	void	*ptr;
+	int		i;
 
+	i = 0;
 	ptr = malloc(nitems * size);
 	if (!ptr)
 		return (NULL);
-	ft_bzero(ptr, size);
+	ft_bzero(ptr, nitems * size);
 	return (ptr);
 }

@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strtrim.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/26 17:56:53 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/03 15:59:19 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/07 20:03:36 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/07 20:03:37 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,14 +53,26 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*string;
 	int		i;
 	int		size;
+	int		j;
 
 	i = 0;
+	j = 0;
+	if (!s1)
+		return (NULL);
 	size = trimmed_size((char *)s1, (char *)set);
-	string = calloc(size, sizeof(char));
+	printf("size: %d\n", size);
+	string = malloc((size + 1) * sizeof(char));
 	if (!string)
 		return (NULL);
 	while (is_in_set((char *)set, s1[i]))
 		i++;
-	ft_strlcpy(string, s1 + i, size + 1);
+	printf("%d\n", i);
+	size++;
+	while (size - j - 1)
+	{
+		string[j] = s1[i + j];
+		j++;
+	}
+	string[j] = '\0';
 	return (string);
 }

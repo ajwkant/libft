@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 16:16:09 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/02 13:40:59 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/07 20:41:02 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,12 @@ char	*fill_in_str(int n, char *string, int digits, int neg)
 	int i;
 
 	i = 0;
+	if (n == -0)
+	{
+		string[0] = '0';
+		string[1] = '\0';
+		return (string);
+	}
 	if (neg == -1)
 		string[0] = '-';
 	while (n)
@@ -48,8 +54,19 @@ char	*ft_itoa(int n)
 		digits++;
 		num /= 10;
 	}
-	string = ft_calloc(digits, sizeof(char));
+	if (n == -0)
+		digits = 1;
+	string = ft_calloc(digits + 1, sizeof(char));
 	if (!string)
 		return (NULL);
 	return (fill_in_str(n, string, digits, neg));
+}
+
+int main()
+{
+	char *i1 = ft_itoa(-623);
+	char *i2 = ft_itoa(156);
+	char *i3 = ft_itoa(-0);
+
+	printf("%s, %s, %s\n", i1, i2, i3);
 }
