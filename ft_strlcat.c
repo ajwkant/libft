@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 11:41:37 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/03 14:17:53 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/06 17:31:25 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ const char * restrict src, size_t dstsize)
 	unsigned long j;
 	unsigned long k;
 	unsigned long l;
+
 	i = 0;
 	j = 0;
 	k = 0;
@@ -34,5 +35,7 @@ const char * restrict src, size_t dstsize)
 	}
 	if (dstsize)
 		dst[i + j] = '\0';
-	return (dstsize + l);
+	if (dstsize < k)
+		return (dstsize + l);
+	return (k + l);
 }

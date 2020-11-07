@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/10/27 11:19:19 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/03 15:18:57 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/06 17:13:13 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ const char * restrict src, size_t dstsize)
 	unsigned long i;
 	i = 0;
 
+	if (!dst)
+		return (0);
 	while (i + 1 < dstsize && src[i])
 	{
 		dst[i] = src[i];
