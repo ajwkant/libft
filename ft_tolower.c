@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_tolower.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 11:12:11 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/03 16:12:30 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:12:09 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:12:10 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_isdigit.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 10:59:29 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/30 14:48:21 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:02:37 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:02:39 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_putnbr_fd.c                                     :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/26 15:40:00 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/02 17:12:30 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 16:37:10 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 16:37:11 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

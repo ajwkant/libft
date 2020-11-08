@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_memcmp.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 09:56:02 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/06 15:42:38 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:03:17 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:03:18 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

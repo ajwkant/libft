@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_isprint.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 11:08:42 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/30 14:48:26 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:02:50 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:02:51 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_split.c                                         :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 17:22:46 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/07 20:42:08 by akant         ########   odam.nl         */
+/*   Created: 2020/11/08 17:11:49 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:11:50 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

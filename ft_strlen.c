@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strlen.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/27 11:13:10 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/28 15:02:25 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:08:30 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:08:31 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 size_t	ft_strlen(const char *str)
 {
 	int i;
-	i = 0;
 
+	i = 0;
 	while (*str)
 	{
 		i++;

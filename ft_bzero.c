@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_bzero.c                                         :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/27 15:48:42 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/29 15:24:14 by akant         ########   odam.nl         */
+/*   Created: 2020/11/08 17:00:44 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:00:46 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

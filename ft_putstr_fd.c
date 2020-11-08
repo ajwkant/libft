@@ -3,17 +3,19 @@
 /*                                                        ::::::::            */
 /*   ft_putstr_fd.c                                     :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/26 13:03:45 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/02 17:16:19 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 16:36:43 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 16:36:51 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
+	if (!s)
+		return ;
 	while (*s)
 	{
 		ft_putchar_fd(*s, fd);

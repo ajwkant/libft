@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_isascii.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 11:07:09 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/02 13:56:48 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:01:56 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:01:57 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -5,8 +5,8 @@
 /*                                                     +:+                    */
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/01 16:16:09 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/07 20:41:02 by akant         ########   odam.nl         */
+/*   Created: 2020/11/08 17:04:49 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:04:50 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,7 @@ char	*fill_in_str(int n, char *string, int digits, int neg)
 	}
 	if (neg == -1)
 		string[0] = '-';
+	printf("%d\n", n);
 	while (n)
 	{
 		string[digits - i - 1] = n % 10 * neg + '0';
@@ -64,9 +65,7 @@ char	*ft_itoa(int n)
 
 int main()
 {
-	char *i1 = ft_itoa(-623);
-	char *i2 = ft_itoa(156);
-	char *i3 = ft_itoa(-0);
+	int i = (-2147483647 -1);
 
-	printf("%s, %s, %s\n", i1, i2, i3);
+	ft_putnbr_fd(i, 1);
 }

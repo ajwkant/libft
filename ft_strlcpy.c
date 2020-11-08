@@ -3,21 +3,21 @@
 /*                                                        ::::::::            */
 /*   ft_strlcpy.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/27 11:19:19 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/06 17:13:13 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:10:54 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:11:05 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcpy(char * restrict dst,
-const char * restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *restrict dst,
+const char *restrict src, size_t dstsize)
 {
 	unsigned long i;
-	i = 0;
 
+	i = 0;
 	if (!dst)
 		return (0);
 	while (i + 1 < dstsize && src[i])

@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_strnstr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/27 16:11:53 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/06 18:04:00 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:09:07 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:09:11 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

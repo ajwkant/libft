@@ -3,17 +3,17 @@
 /*                                                        ::::::::            */
 /*   ft_strlcat.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/27 11:41:37 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/06 17:31:25 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:06:55 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:07:02 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char * restrict dst,
-const char * restrict src, size_t dstsize)
+size_t		ft_strlcat(char *restrict dst,
+const char *restrict src, size_t dstsize)
 {
 	unsigned long i;
 	unsigned long j;

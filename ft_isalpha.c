@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_isalpha.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/10/28 11:01:39 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/10/30 14:49:59 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/08 17:00:27 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/08 17:00:28 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
