@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstnew.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/03 16:48:08 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/04 10:35:10 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/12 19:40:53 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/12 19:41:03 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 t_list	*ft_lstnew(void *content)
 {
 	t_list *newlist;
+
 	newlist = malloc(sizeof(t_list));
 	if (!newlist)
 		return (NULL);

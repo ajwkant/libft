@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstsize.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/03 17:10:01 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/04 10:35:59 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/12 19:40:42 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/12 19:40:43 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

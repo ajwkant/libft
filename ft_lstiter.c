@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstiter.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/04 08:59:07 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/04 10:38:45 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/12 19:40:28 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/12 19:40:30 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
