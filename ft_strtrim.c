@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 20:03:36 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/07 20:03:37 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/11 13:06:09 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,13 +60,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	if (!s1)
 		return (NULL);
 	size = trimmed_size((char *)s1, (char *)set);
-	printf("size: %d\n", size);
 	string = malloc((size + 1) * sizeof(char));
 	if (!string)
 		return (NULL);
 	while (is_in_set((char *)set, s1[i]))
 		i++;
-	printf("%d\n", i);
 	size++;
 	while (size - j - 1)
 	{

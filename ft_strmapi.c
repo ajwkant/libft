@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/01 17:25:33 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/07 21:03:26 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/11 12:58:45 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!s)
 		return (NULL);
 	string = malloc(ft_strlen(s) + 1 * sizeof(char));
-	printf("%zu\n", ft_strlen(s));
 	if (!string)
 		return (NULL);
 	while (s[i])

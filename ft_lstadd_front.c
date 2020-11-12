@@ -6,7 +6,7 @@
 /*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/03 17:00:51 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/04 12:44:45 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/09 21:04:25 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
+	*lst= new;
 }

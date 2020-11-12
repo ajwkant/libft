@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:04:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:04:50 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/11 13:02:49 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ char	*fill_in_str(int n, char *string, int digits, int neg)
 	}
 	if (neg == -1)
 		string[0] = '-';
-	printf("%d\n", n);
 	while (n)
 	{
 		string[digits - i - 1] = n % 10 * neg + '0';
@@ -61,11 +60,4 @@ char	*ft_itoa(int n)
 	if (!string)
 		return (NULL);
 	return (fill_in_str(n, string, digits, neg));
-}
-
-int main()
-{
-	int i = (-2147483647 -1);
-
-	ft_putnbr_fd(i, 1);
 }

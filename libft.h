@@ -6,15 +6,13 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:13:22 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:13:52 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/11 15:45:47 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stddef.h>
-#include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #ifndef LIBFT_H
 # define LIBFT_H
