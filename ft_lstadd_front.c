@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstadd_front.c                                  :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/03 17:00:51 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/09 21:04:25 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/12 13:58:26 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/12 13:59:02 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
-	*lst= new;
+	*lst = new;
 }

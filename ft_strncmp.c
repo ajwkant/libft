@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 20:35:34 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/07 20:35:36 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/12 16:31:01 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,7 @@ int		ft_strncmp(const char *str1, const char *str2, size_t n)
 		if (i == n)
 			return (0);
 	}
+	if (!n)
+		return (0);
 	return (((unsigned char *)str1)[i] - ((unsigned char *)str2)[i]);
 }

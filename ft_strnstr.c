@@ -6,17 +6,17 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:09:07 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:09:11 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/12 16:46:35 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_this_needle(char *string, char *needle)
+int		is_this_needle(char *haystack, char *needle, int i)
 {
-	while (*string == *needle && *needle)
+	while (haystack[i] == *needle && *needle)
 	{
-		string++;
+		i++;
 		needle++;
 	}
 	if (!*needle)
@@ -26,19 +26,23 @@ int		is_this_needle(char *string, char *needle)
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if (!*needle || !len)
+	int i;
+
+	i = 0;
+	if (!*needle)
 		return ((char *)haystack);
-	while (*haystack && len)
+	if (!len)
+		return (NULL);
+	while (haystack[i] && len - i)
 	{
-		if (ft_strlen(needle) > len)
+		if (ft_strlen(needle) > len - i)
 			return (NULL);
-		if (*haystack == *needle)
+		if (haystack[i] == *needle)
 		{
-			if (is_this_needle((char *)haystack, (char *)needle))
-				return ((char *)haystack);
+			if (is_this_needle((char *)haystack, (char *)needle, i))
+				return ((char *)&(haystack[i]));
 		}
-		haystack++;
-		len--;
+		i++;
 	}
 	return (NULL);
 }

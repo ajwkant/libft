@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstclear.c                                      :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/04 08:48:06 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/11 12:53:02 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/12 13:59:11 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/12 13:59:12 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

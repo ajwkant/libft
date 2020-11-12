@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_lstadd_back.c                                   :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/03 17:13:45 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/09 21:11:36 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/12 13:58:17 by akant         #+#    #+#                 */
+/*   Updated: 2020/11/12 13:58:18 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

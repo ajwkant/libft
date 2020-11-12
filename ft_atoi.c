@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 14:21:44 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/07 15:46:38 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/12 13:54:43 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int		whitespace_sign(const char *string, int *neg)
 	i = 0;
 	*neg = 1;
 	while (((unsigned char)string[i] >= 9 && (unsigned char)string[i] <= 13)
-		|| (unsigned char)string[i] == 32)
+	|| (unsigned char)string[i] == 32)
 		i++;
 	if ((unsigned char)string[i] == '-' || (unsigned char)string[i] == '+')
 	{
