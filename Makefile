@@ -6,7 +6,7 @@
 #    By: akant <akant@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/12 13:53:25 by akant         #+#    #+#                  #
-#    Updated: 2020/11/13 16:15:45 by alexanderka   ########   odam.nl          #
+#    Updated: 2020/11/14 21:33:25 by akant         ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,14 +40,14 @@ all: $(NAME)
 $(NAME): $(OBJS)
 	ar -rcs $@ $^
 
-bonus:
-	$(MAKE) BONUSBOOL=1 all
+%.o: %.c $(HEADER_FILES)
+	$(CC) -c $(CFLAGS) -o $@ $<
 
-# %.o: %.c $(HEADER_FILES)
-# 	$(CC) -c $(CFLAGS) -o $@ $<
+bonus:
+	$(MAKE) BONUS_BOOL=1 all
 
 clean:
-	rm -f $(OBJS_REG)
+	rm -f $(OBJS_BONUS) $(OBJS_REG)
 
 fclean: clean
 	rm -f $(NAME)

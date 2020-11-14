@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:11:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/13 14:36:51 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/14 18:30:35 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,11 +95,10 @@ char	**ft_split(char const *s, char c)
 	i = split_string(array, (char *)s, c);
 	while (i)
 	{
-		free(array[i]);
 		i--;
+		free(array[i]);
 		if (!i)
 		{
-			free(array[i]);
 			free(array);
 			return (NULL);
 		}

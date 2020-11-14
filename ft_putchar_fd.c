@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 21:04:44 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/09 20:10:36 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/14 16:40:54 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,7 @@
 
 void	ft_putchar_fd(char c, int fd)
 {
+	if (fd == -1)
+		return ;
 	write(fd, &c, 1);
 }
