@@ -6,14 +6,14 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:06:55 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/12 19:46:11 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/14 12:04:40 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *restrict dst,
-const char *restrict src, size_t dstsize)
+size_t		ft_strlcat(char *dst,
+const char *src, size_t dstsize)
 {
 	unsigned long i;
 	unsigned long j;
@@ -26,6 +26,8 @@ const char *restrict src, size_t dstsize)
 	l = 0;
 	k = ft_strlen(dst);
 	l = ft_strlen(src);
+	if (dstsize < k)
+		return (dstsize + l);
 	while (dst[i])
 		i++;
 	while (src[j] && i + j + 1 < dstsize)
@@ -35,7 +37,5 @@ const char *restrict src, size_t dstsize)
 	}
 	if (dstsize)
 		dst[i + j] = '\0';
-	if (dstsize < k)
-		return (dstsize + l);
 	return (k + l);
 }

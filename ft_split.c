@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:11:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:11:50 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/13 14:36:51 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ char	**ft_split(char const *s, char c)
 		{
 			free(array[i]);
 			free(array);
+			return (NULL);
 		}
 	}
 	return (array);

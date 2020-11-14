@@ -6,7 +6,7 @@
 #    By: akant <akant@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/12 13:53:25 by akant         #+#    #+#                  #
-#    Updated: 2020/11/12 13:57:38 by akant         ########   odam.nl          #
+#    Updated: 2020/11/13 16:15:45 by alexanderka   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -26,23 +26,28 @@ HEADER_FILES = libft.h
 
 CFLAGS = -Wall -Wextra -Werror
 
-OBJS = $(SRCS:.c=.o)
-OBJS_W = $(SRCS:.c=.o) $(BONUS_FILES:.c=.o)
+OBJS_REG = $(SRCS:.c=.o)
+OBJS_BONUS = $(BONUS_FILES:.c=.o)
+
+ifdef BONUS_BOOL
+OBJS = $(OBJS_REG) $(OBJS_BONUS)
+else
+OBJS = $(OBJS_REG)
+endif
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	ar -rcs $@ $^
 
-bonus: $(OBJS) $(OBJS_W)
-	ar -rcs $(NAME) $^
+bonus:
+	$(MAKE) BONUSBOOL=1 all
 
-%.o: %.c $(HEADER_FILES)
-	$(CC) -c $(CFLAGS) -o $@ $<
+# %.o: %.c $(HEADER_FILES)
+# 	$(CC) -c $(CFLAGS) -o $@ $<
 
 clean:
-	rm -f $(OBJS)
-	rm -f $(OBJS_W)
+	rm -f $(OBJS_REG)
 
 fclean: clean
 	rm -f $(NAME)

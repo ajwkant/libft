@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 19:40:12 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/12 19:40:14 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/13 15:34:31 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
-	del(lst->content);
+	if (lst == NULL)
+		return ;
+	if (del != NULL)
+		(*del)(lst->content);
 	free(lst);
 }

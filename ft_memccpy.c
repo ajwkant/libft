@@ -6,14 +6,14 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:10:00 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:10:07 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/14 12:02:07 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memccpy(void *restrict dst,
-const void *restrict src, int c, size_t n)
+void	*ft_memccpy(void *dst,
+const void *src, int c, size_t n)
 {
 	unsigned int i;
 

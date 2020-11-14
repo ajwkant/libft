@@ -6,14 +6,14 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:10:54 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:11:05 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/14 12:04:38 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst,
-const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst,
+const char *src, size_t dstsize)
 {
 	unsigned long i;
 
