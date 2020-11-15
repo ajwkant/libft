@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:02:14 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:02:16 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/15 18:19:00 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int		ft_isalnum(int c)
 {
 	if (('a' <= c && c <= 'z') ||
 	('A' <= c && c <= 'Z') || ('0' <= c && c <= '9'))
-		return (c);
+		return (1);
 	else
 		return (0);
 }

@@ -6,12 +6,11 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:04:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/14 20:32:52 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/15 16:04:29 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char	*fill_in_str(int n, char *string, int digits, int neg)
 {

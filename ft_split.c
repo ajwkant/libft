@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:11:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/14 18:30:35 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/15 15:04:34 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int		count_splits(char *s, char c)
 				size++;
 			bool = 0;
 		}
-		if (*s == c)
+		else
 			bool = 1;
 		s++;
 	}
@@ -39,13 +39,13 @@ char	*fill_in(char *array, char *s, char delim)
 	int i;
 
 	i = 0;
-	while (s[i] != delim)
+	while (s[i] != delim && s[i] != '\0')
 		i++;
-	array = ft_calloc(i, sizeof(char));
+	array = ft_calloc(i + 1, sizeof(char));
 	if (!array)
 		return (NULL);
 	i = 0;
-	while (s[i] != delim)
+	while (s[i] != delim && s[i] != '\0')
 	{
 		array[i] = s[i];
 		i++;
@@ -73,7 +73,7 @@ int		split_string(char **array, char *s, char c)
 			}
 			bool = 0;
 		}
-		else if (*s == c)
+		else
 			bool = 1;
 		s++;
 	}
