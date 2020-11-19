@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:10:00 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/17 13:10:24 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/19 14:59:48 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	*ft_memccpy(void *dst,
 const void *src, int c, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	while (i < n)

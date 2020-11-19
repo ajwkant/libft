@@ -6,17 +6,15 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:11:29 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/18 13:26:44 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/19 15:01:00 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 char	*ft_strrchr(const char *str, int c)
 {
 	char *save_pointer;
 
-	save_pointer = NULL;
+	save_pointer = 0;
 	if (!*str && c == 0)
 		return ((char *)str);
 	while (*str || *str == (unsigned char)c)

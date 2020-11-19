@@ -6,31 +6,29 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:11:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/18 15:06:26 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/19 20:07:34 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <string.h>
-#include <stdio.h>
 
 int		count_splits(char *s, char c)
 {
 	int	size;
-	int bool;
+	int boolean;
 
 	size = 0;
-	bool = 1;
+	boolean = 1;
 	while (*s)
 	{
 		if (*s != c)
 		{
-			if (bool)
+			if (boolean)
 				size++;
-			bool = 0;
+			boolean = 0;
 		}
 		else
-			bool = 1;
+			boolean = 1;
 		s++;
 	}
 	if (!size)
@@ -59,26 +57,26 @@ char	*fill_in(char *array, char *s, char delim)
 
 int		split_string(char **array, char *s, char c)
 {
-	int bool;
+	int boolean;
 	int i;
 
-	bool = 1;
+	boolean = 1;
 	i = 0;
 	while (*s)
 	{
 		if (*s != c)
 		{
-			if (bool)
+			if (boolean)
 			{
 				array[i] = fill_in(array[i], s, c);
 				if (!array[i])
 					return (i);
 				i++;
 			}
-			bool = 0;
+			boolean = 0;
 		}
 		else
-			bool = 1;
+			boolean = 1;
 		s++;
 	}
 	return (0);
@@ -98,34 +96,25 @@ void	free_array(char **array, int i)
 	}
 }
 
-char	**empty_string(char **array)
-{
-	array[0] = ft_calloc(1, 1);
-	if (!array[0])
-		return (NULL);
-	return (array);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
 	int		i;
-	int		bool;
 
 	if (!s)
 		return (NULL);
-	bool = 1;
 	array = ft_calloc(count_splits((char *)s, c) + 1, sizeof(char *));
 	if (!array)
 		return (NULL);
+	i = 0;
 	if (*s == '\0')
 	{
-		if (!empty_string(array))
-			free(array);
-		else
-			return (array);
+		array[0] = ft_calloc(1, 1);
+		if (!array[0])
+			i++;
 	}
-	i = split_string(array, (char *)s, c);
+	else
+		i = split_string(array, (char *)s, c);
 	free_array(array, i);
 	return (array);
 }

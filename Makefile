@@ -6,7 +6,7 @@
 #    By: akant <akant@student.codam.nl>               +#+                      #
 #                                                    +#+                       #
 #    Created: 2020/11/12 13:53:25 by akant         #+#    #+#                  #
-#    Updated: 2020/11/15 21:13:39 by akant         ########   odam.nl          #
+#    Updated: 2020/11/19 15:12:57 by alexanderka   ########   odam.nl          #
 #                                                                              #
 # **************************************************************************** #
 
@@ -39,7 +39,7 @@ endif
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	ar -rcs $@ $^
+	ar -rcs $(NAME) $(OBJS)
 
 %.o: %.c $(HEADER_FILES)
 	$(CC) -c $(CFLAGS) -o $@ $<
@@ -53,6 +53,8 @@ clean:
 fclean: clean
 	rm -f $(NAME)
 
-re: fclean all
+re:
+	$(MAKE) fclean
+	$(MAKE) all
 
 .PHONY: all bonus clean fclean re

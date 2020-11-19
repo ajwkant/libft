@@ -6,11 +6,9 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:02:50 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:02:51 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/19 14:53:59 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_isprint(int c)
 {

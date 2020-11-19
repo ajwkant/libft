@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:04:11 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:04:21 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/19 14:56:28 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	if (((unsigned char *)dst) > ((unsigned char *)src))
@@ -27,8 +27,6 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
 		}
 	}
 	else
-	{
 		ft_memcpy(dst, src, n);
-	}
 	return (dst);
 }

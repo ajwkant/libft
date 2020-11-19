@@ -6,11 +6,9 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 14:21:44 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/12 13:54:43 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/19 14:51:36 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		whitespace_sign(const char *string, int *neg)
 {

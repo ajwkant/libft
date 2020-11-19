@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:03:17 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/12 16:26:20 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/19 14:59:31 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	while (n - i && ((unsigned char*)str1)[i] == ((unsigned char *)str2)[i])

@@ -6,16 +6,13 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:02:37 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/15 18:19:12 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/19 14:53:47 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int		ft_isdigit(int c)
 {
 	if ('0' <= c && c <= '9')
 		return (1);
-	else
-		return (0);
+	return (0);
 }

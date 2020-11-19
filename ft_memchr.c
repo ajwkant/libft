@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 13:58:45 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/15 18:51:16 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/19 14:59:16 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memchr(const void *str, int c, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	i = 0;
 	while (n)

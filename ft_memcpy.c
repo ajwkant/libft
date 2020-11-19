@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:03:41 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:03:45 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/19 14:59:04 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned int i;
+	size_t i;
 
 	if (!src && !dest)
 		return (NULL);

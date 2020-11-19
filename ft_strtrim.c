@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 20:03:36 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/11 13:06:09 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/19 11:49:23 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int		is_in_set(char *set, char c)
 {
-	while (*set)
+	while (set && *set)
 	{
 		if (*set == c)
 			return (1);
@@ -53,24 +53,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 	char	*string;
 	int		i;
 	int		size;
-	int		j;
 
 	i = 0;
-	j = 0;
 	if (!s1)
 		return (NULL);
 	size = trimmed_size((char *)s1, (char *)set);
-	string = malloc((size + 1) * sizeof(char));
-	if (!string)
-		return (NULL);
 	while (is_in_set((char *)set, s1[i]))
 		i++;
-	size++;
-	while (size - j - 1)
-	{
-		string[j] = s1[i + j];
-		j++;
-	}
-	string[j] = '\0';
+	string = ft_substr(s1, i, size);
 	return (string);
 }
