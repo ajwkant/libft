@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:10:00 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/14 12:02:07 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/17 13:10:24 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ const void *src, int c, size_t n)
 	unsigned int i;
 
 	i = 0;
-	if (!src && !dst)
-		return (NULL);
 	while (i < n)
 	{
 		((char *)dst)[i] = ((char *)src)[i];

@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:06:14 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/08 17:06:15 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/18 12:06:56 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,11 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	while (*str)
+	while (*str || *str == (unsigned char)c)
 	{
-		if (*str == c)
+		if (*str == (unsigned char)c)
 			return ((char *)str);
 		str++;
 	}
-	if (c == '\0')
-		return ((char *)str);
 	return (NULL);
 }

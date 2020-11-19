@@ -6,11 +6,13 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:11:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/15 15:04:34 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/18 15:06:26 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
+#include <stdio.h>
 
 int		count_splits(char *s, char c)
 {
@@ -31,6 +33,8 @@ int		count_splits(char *s, char c)
 			bool = 1;
 		s++;
 	}
+	if (!size)
+		return (1);
 	return (size);
 }
 
@@ -80,6 +84,28 @@ int		split_string(char **array, char *s, char c)
 	return (0);
 }
 
+void	free_array(char **array, int i)
+{
+	while (i)
+	{
+		i--;
+		free(array[i]);
+		if (!i)
+		{
+			free(array);
+			return ;
+		}
+	}
+}
+
+char	**empty_string(char **array)
+{
+	array[0] = ft_calloc(1, 1);
+	if (!array[0])
+		return (NULL);
+	return (array);
+}
+
 char	**ft_split(char const *s, char c)
 {
 	char	**array;
@@ -92,16 +118,14 @@ char	**ft_split(char const *s, char c)
 	array = ft_calloc(count_splits((char *)s, c) + 1, sizeof(char *));
 	if (!array)
 		return (NULL);
-	i = split_string(array, (char *)s, c);
-	while (i)
+	if (*s == '\0')
 	{
-		i--;
-		free(array[i]);
-		if (!i)
-		{
+		if (!empty_string(array))
 			free(array);
-			return (NULL);
-		}
+		else
+			return (array);
 	}
+	i = split_string(array, (char *)s, c);
+	free_array(array, i);
 	return (array);
 }
