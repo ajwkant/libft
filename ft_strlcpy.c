@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:10:54 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/19 14:50:57 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/23 10:51:44 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t i;
 
 	i = 0;
-	if (!src)
+	if (!src && !dst)
 		return (0);
-	if (!dst)
+	if (dstsize <= 0)
 		return (ft_strlen(src));
 	while (i + 1 < dstsize && src[i])
 	{

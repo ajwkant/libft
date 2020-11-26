@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:07:39 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/15 18:52:59 by akant         ########   odam.nl         */
+/*   Updated: 2020/11/23 10:48:36 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,18 +25,16 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	string = ft_calloc((total_length + 1), sizeof(char));
 	if (string == NULL)
 		return (NULL);
-	while (i < total_length)
+	while (i < total_length && *s1)
 	{
-		if (*s1)
-		{
-			string[i] = *s1;
-			s1++;
-		}
-		else if (*s2)
-		{
-			string[i] = *s2;
-			s2++;
-		}
+		string[i] = *s1;
+		s1++;
+		i++;
+	}
+	while (i < total_length && *s2)
+	{
+		string[i] = *s2;
+		s2++;
 		i++;
 	}
 	return (string);

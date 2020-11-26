@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_substr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: akant <akant@student.codam.nl>               +#+                     */
+/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/07 16:12:11 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/19 14:50:34 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/23 10:31:54 by alexanderka   #+#    #+#                 */
+/*   Updated: 2020/11/23 10:31:57 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char		*substr;
-	size_t 		size;
+	size_t		size;
 
 	if (!s)
 		return (NULL);

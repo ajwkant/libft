@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_itoa.c                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: akant <akant@student.codam.nl>               +#+                     */
+/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/08 17:04:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/15 16:04:29 by akant         ########   odam.nl         */
+/*   Created: 2020/11/23 10:32:42 by alexanderka   #+#    #+#                 */
+/*   Updated: 2020/11/23 10:32:43 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

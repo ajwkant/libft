@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_isalnum.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: akant <akant@student.codam.nl>               +#+                     */
+/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/08 17:02:14 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/19 14:53:28 by alexanderka   ########   odam.nl         */
+/*   Created: 2020/11/23 10:32:49 by alexanderka   #+#    #+#                 */
+/*   Updated: 2020/11/23 10:32:50 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:11:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/19 20:07:34 by alexanderka   ########   odam.nl         */
+/*   Updated: 2020/11/23 10:27:40 by alexanderka   ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,14 +107,7 @@ char	**ft_split(char const *s, char c)
 	if (!array)
 		return (NULL);
 	i = 0;
-	if (*s == '\0')
-	{
-		array[0] = ft_calloc(1, 1);
-		if (!array[0])
-			i++;
-	}
-	else
-		i = split_string(array, (char *)s, c);
+	i = split_string(array, (char *)s, c);
 	free_array(array, i);
 	return (array);
 }
