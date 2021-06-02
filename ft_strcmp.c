@@ -6,13 +6,13 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 20:35:34 by akant         #+#    #+#                 */
-/*   Updated: 2021/06/02 12:24:26 by akant         ########   odam.nl         */
+/*   Updated: 2021/06/02 12:33:56 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strncmp(const char *str1, const char *str2)
+int		ft_strcmp(const char *str1, const char *str2)
 {
 	unsigned int i;
 
