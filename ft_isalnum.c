@@ -3,17 +3,17 @@
 /*                                                        ::::::::            */
 /*   ft_isalnum.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/23 10:32:49 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/23 10:32:50 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:20:50 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-	if (('a' <= c && c <= 'z') ||
-	('A' <= c && c <= 'Z') || ('0' <= c && c <= '9'))
+	if (('a' <= c && c <= 'z')
+		|| ('A' <= c && c <= 'Z') || ('0' <= c && c <= '9'))
 		return (1);
 	return (0);
 }

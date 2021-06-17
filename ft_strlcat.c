@@ -6,19 +6,18 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:06:55 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/14 12:04:40 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:22:38 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t		ft_strlcat(char *dst,
-const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	unsigned long i;
-	unsigned long j;
-	unsigned long k;
-	unsigned long l;
+	unsigned long	i;
+	unsigned long	j;
+	unsigned long	k;
+	unsigned long	l;
 
 	i = 0;
 	j = 0;

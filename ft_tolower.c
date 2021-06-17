@@ -3,14 +3,14 @@
 /*                                                        ::::::::            */
 /*   ft_tolower.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <akant@student.codam.nl>       +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/25 12:08:42 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/25 12:12:30 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:20:19 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_tolower(int c)
+int	ft_tolower(int c)
 {
 	if (65 <= c && c <= 90)
 		c += 32;

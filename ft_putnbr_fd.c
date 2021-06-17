@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 16:37:10 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/19 15:00:41 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:19:09 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char number;
+	char	number;
 
 	if (n == -2147483648)
 	{

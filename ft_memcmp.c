@@ -6,18 +6,18 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:03:17 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/19 14:59:31 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:18:55 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_memcmp(const void *str1, const void *str2, size_t n)
+int	ft_memcmp(const void *str1, const void *str2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
-	while (n - i && ((unsigned char*)str1)[i] == ((unsigned char *)str2)[i])
+	while (n - i && ((unsigned char *)str1)[i] == ((unsigned char *)str2)[i])
 	{
 		i++;
 		if (i == n)

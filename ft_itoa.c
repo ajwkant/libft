@@ -3,10 +3,10 @@
 /*                                                        ::::::::            */
 /*   ft_itoa.c                                          :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/23 10:32:42 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/23 10:32:43 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:20:27 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*fill_in_str(int n, char *string, int digits, int neg)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (n == -0)

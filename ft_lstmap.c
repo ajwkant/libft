@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 14:00:24 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/19 19:34:09 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/17 14:16:03 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *newlist;
-	t_list *newnode;
+	t_list	*newlist;
+	t_list	*newnode;
 
 	if (!lst || !f)
 		return (NULL);

@@ -6,18 +6,18 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 14:21:44 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/19 14:51:36 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:21:26 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		whitespace_sign(const char *string, int *neg)
+int	whitespace_sign(const char *string, int *neg)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	*neg = 1;
 	while (((unsigned char)string[i] >= 9 && (unsigned char)string[i] <= 13)
-	|| (unsigned char)string[i] == 32)
+		|| (unsigned char)string[i] == 32)
 		i++;
 	if ((unsigned char)string[i] == '-' || (unsigned char)string[i] == '+')
 	{
@@ -28,7 +28,7 @@ int		whitespace_sign(const char *string, int *neg)
 	return (i);
 }
 
-int		ft_atoi(const char *str)
+int	ft_atoi(const char *str)
 {
 	long int	num;
 	int			neg;
@@ -38,8 +38,8 @@ int		ft_atoi(const char *str)
 	negptr = &neg;
 	num = 0;
 	i = whitespace_sign(str, negptr);
-	while ('0' <= (unsigned char)str[i] &&
-	(unsigned char)str[i] <= '9' && num < 2147483648)
+	while ('0' <= (unsigned char)str[i]
+		&& (unsigned char)str[i] <= '9' && num < 2147483648)
 	{
 		num = num * 10 + ((unsigned char)str[i] - '0');
 		i++;

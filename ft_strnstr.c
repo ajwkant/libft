@@ -3,16 +3,16 @@
 /*                                                        ::::::::            */
 /*   ft_strnstr.c                                       :+:    :+:            */
 /*                                                     +:+                    */
-/*   By: alexanderkant <alexanderkant@student.co      +#+                     */
+/*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/23 10:34:34 by alexanderka   #+#    #+#                 */
-/*   Updated: 2020/11/23 10:34:35 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:15:27 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_this_needle(char *haystack, char *needle, int i)
+int	is_this_needle(char *haystack, char *needle, int i)
 {
 	while (haystack[i] == *needle && *needle)
 	{
@@ -26,7 +26,7 @@ int		is_this_needle(char *haystack, char *needle, int i)
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (!*needle)

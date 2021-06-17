@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/12 13:59:11 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/12 13:59:12 by akant         ########   odam.nl         */
+/*   Updated: 2021/06/16 13:19:16 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
-	t_list *next_node;
+	t_list	*next_node;
 
 	while (*lst)
 	{

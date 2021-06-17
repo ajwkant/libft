@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:10:54 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/23 10:51:44 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:15:54 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (!src && !dst)

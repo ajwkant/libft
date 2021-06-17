@@ -6,13 +6,13 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/07 20:03:36 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/19 11:49:23 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/16 13:23:59 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		is_in_set(char *set, char c)
+int	is_in_set(char *set, char c)
 {
 	while (set && *set)
 	{
@@ -23,11 +23,11 @@ int		is_in_set(char *set, char c)
 	return (0);
 }
 
-int		trimmed_size(char *string, char *set)
+int	trimmed_size(char *string, char *set)
 {
 	int	count;
 	int	i;
-	int j;
+	int	j;
 
 	i = 0;
 	j = 0;

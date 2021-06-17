@@ -6,16 +6,16 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:11:49 by akant         #+#    #+#                 */
-/*   Updated: 2020/11/23 10:27:40 by alexanderka   ########   odam.nl         */
+/*   Updated: 2021/06/17 14:15:08 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		count_splits(char *s, char c)
+int	count_splits(char *s, char c)
 {
 	int	size;
-	int boolean;
+	int	boolean;
 
 	size = 0;
 	boolean = 1;
@@ -38,7 +38,7 @@ int		count_splits(char *s, char c)
 
 char	*fill_in(char *array, char *s, char delim)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != delim && s[i] != '\0')
@@ -55,10 +55,10 @@ char	*fill_in(char *array, char *s, char delim)
 	return (array);
 }
 
-int		split_string(char **array, char *s, char c)
+int	split_string(char **array, char *s, char c)
 {
-	int boolean;
-	int i;
+	int	boolean;
+	int	i;
 
 	boolean = 1;
 	i = 0;
