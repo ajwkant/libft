@@ -1,0 +1,19 @@
+
+<mat-sidenav-container>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+     <div>
+       <a>
+          Bconnect
+       </a>
+     </div>
+    </mat-toolbar>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+<div>
+  <h2>Company details</h2>
+  <app-dynamic-form [questions]="questions$ | async"></app-dynamic-form>
+</div>
+
+<!-- <optionBoxes></optionBoxes> -->
