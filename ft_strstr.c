@@ -1,42 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strjoin.c                                       :+:    :+:            */
+/*   ft_strstr.c                                        :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/08 17:07:39 by akant         #+#    #+#                 */
-/*   Updated: 2021/10/24 11:56:12 by akant         ########   odam.nl         */
+/*   Created: 2020/11/26 10:33:46 by akant         #+#    #+#                 */
+/*   Updated: 2021/12/01 18:29:28 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-char	*ft_strjoin(char const *s1, char const *s2)
+int	is_this_needle(char *haystack, char *needle, int i)
 {
-	int		i;
-	int		total_length;
-	char	*string;
+	while (haystack[i] == *needle && *needle)
+	{
+		i++;
+		needle++;
+	}
+	if (!*needle)
+		return (1);
+	return (0);
+}
+
+char	*ft_strstr(const char *haystack, const char *needle)
+{
+	int	i;
 
 	i = 0;
-	if (!s1 || !s2)
-		return (NULL);
-	total_length = (int)(ft_strlen(s1) + ft_strlen(s2));
-	string = ft_calloc((total_length + 1), sizeof(char));
-	if (string == NULL)
-		return (NULL);
-	while (i < total_length && *s1)
+	if (!*needle)
+		return ((char *)haystack);
+	while (haystack[i])
 	{
-		string[i] = *s1;
-		s1++;
+		if (haystack[i] == *needle)
+		{
+			if (is_this_needle((char *)haystack, (char *)needle, i))
+				return ((char *)&(haystack[i]));
+		}
 		i++;
 	}
-	while (i < total_length && *s2)
-	{
-		string[i] = *s2;
-		s2++;
-		i++;
-	}
-	return (string);
+	return (NULL);
 }

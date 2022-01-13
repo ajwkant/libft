@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strcmp.c                                        :+:    :+:            */
+/*   ft_atoi_failed.c                                   :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/07 20:35:34 by akant         #+#    #+#                 */
-/*   Updated: 2021/12/01 18:25:51 by akant         ########   odam.nl         */
+/*   Created: 2021/11/18 11:52:37 by akant         #+#    #+#                 */
+/*   Updated: 2021/12/01 17:56:30 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-int	ft_strcmp(const char *str1, const char *str2)
+int	atoi_failed(char *str, int x)
 {
-	unsigned int	i;
-
-	i = 0;
-	while (((unsigned char *)str1)[i] == ((unsigned char *)str2)[i]
-		&& ((unsigned char *)str2)[i])
-		i++;
-	return (((unsigned char *)str1)[i] - ((unsigned char *)str2)[i]);
+	if (x == 0 && str && str[0] != '0')
+		return (1);
+	else if (x == -1 && str && !(str[0] == '-' && str[1] == '1'))
+		return (1);
+	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:08:30 by akant         #+#    #+#                 */
-/*   Updated: 2021/06/16 13:16:19 by akant         ########   odam.nl         */
+/*   Updated: 2021/12/01 18:26:35 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,10 @@ size_t	ft_strlen(const char *str)
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (*str)
+	{
 		i++;
+		str++;
+	}
 	return (i);
 }

@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        ::::::::            */
-/*   ft_strcmp.c                                        :+:    :+:            */
+/*   ft_split_free.c                                    :+:    :+:            */
 /*                                                     +:+                    */
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
-/*   Created: 2020/11/07 20:35:34 by akant         #+#    #+#                 */
-/*   Updated: 2021/12/01 18:25:51 by akant         ########   odam.nl         */
+/*   Created: 2021/11/13 15:55:21 by akant         #+#    #+#                 */
+/*   Updated: 2021/12/01 18:25:16 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_strcmp(const char *str1, const char *str2)
+void	ft_split_free(char **split)
 {
-	unsigned int	i;
+	int	i;
 
 	i = 0;
-	while (((unsigned char *)str1)[i] == ((unsigned char *)str2)[i]
-		&& ((unsigned char *)str2)[i])
+	while (split && split[i])
+	{
+		free(split[i]);
 		i++;
-	return (((unsigned char *)str1)[i] - ((unsigned char *)str2)[i]);
+	}
+	if (split)
+		free(split);
 }
