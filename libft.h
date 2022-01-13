@@ -6,7 +6,7 @@
 /*   By: akant <akant@student.codam.nl>               +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2020/11/08 17:13:22 by akant         #+#    #+#                 */
-/*   Updated: 2021/06/17 14:19:00 by akant         ########   odam.nl         */
+/*   Updated: 2022/01/13 12:09:58 by akant         ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+float				ft_atof(char *str);
 int					ft_atoi(const char *str);
 void				ft_bzero(void *s, int nbyte);
 void				*ft_calloc(size_t nitems, size_t size);
